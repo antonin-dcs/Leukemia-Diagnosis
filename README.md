@@ -1,12 +1,15 @@
 # IA detection leucémie
 
+Contexte
+La leucémie lymphoblastique à cellule B (B-alll) est un des cancers les plus répandus. Son diagnostique nécessite des tests invasifs et coûteux. 
+
+L’examen microscopique du sang est une méthode courante de dépistage, mais il présente des limites lorsqu’il est réalisé manuellement par le personnel médical. (subjectivité, temps, accès limité...)
+
+Utilisation de l’ia
+Pendant ce temps, les techniques d’intelligence artificielle (IA) permettent d’obtenir des résultats remarquables dans l’analyse d’images de microscopie sanguine.
 
 
-## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
 ## Add your files
 
