@@ -12,7 +12,7 @@ La leucémie lymphoblastique à cellule B (B-alll) est un des cancers les plus r
 
 L’examen microscopique du sang est une méthode courante de dépistage, mais il présente des limites lorsqu’il est réalisé manuellement par le personnel médical. (subjectivité, temps, accès limité...)
 
-Utilisation de l’ia
+# Utilisation de l’IA
 Pendant ce temps, les techniques d’intelligence artificielle (IA) permettent d’obtenir des résultats remarquables dans l’analyse d’images de microscopie sanguine.
 
 
