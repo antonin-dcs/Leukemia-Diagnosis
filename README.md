@@ -1,4 +1,4 @@
-## Name :HemAI
+## Name : HemAI
 
 ## Description
 Créer une intelligence artificielle de reconnaissance d’image pour diagnostiquer la leucémie lymphoblastique à partir de frotti sanguin.
