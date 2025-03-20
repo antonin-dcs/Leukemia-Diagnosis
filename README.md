@@ -18,11 +18,12 @@ Pendant ce temps, les techniques d’intelligence artificielle (IA) permettent d
 
 # Etapes du traitement de l'image : 
 1. : Conversion RGB-->LAB (Maté doit ajouter le fichier)
-2. : formatage des images en tailles 224 x 224 resizing fonctionalité (déja merge dans le main par Antonin)
-3. : K-clustering --> à creuser,
-4. : Binary Thresholding
-5. : Création du masque
-6. : Nettoyage : Comparaison avec l’image originale pour garder uniquement les éléments importants
+2. : Extraction de a (canal de couleur) --> fait par Anto
+3. : formatage des images en tailles 224 x 224 resizing fonctionalité (déja merge dans le main par Antonin)
+4. : K-clustering --> à creuser,
+5. : Binary Thresholding
+6. : Création du masque
+7. : Nettoyage : Comparaison avec l’image originale pour garder uniquement les éléments importants
 
 
 Images Initiales 
