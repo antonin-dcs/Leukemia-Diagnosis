@@ -23,4 +23,4 @@ def resizing1(chemin_image):
     return resized_img
 
 
-resizing1("exemple_image.jpg")
+#resizing1("exemple_image.jpg")
