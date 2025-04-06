@@ -11,13 +11,13 @@ cv2.waitKey(0)
 """
 
 
-def resizing1(chemin_image):
+def resizing1(chemin_image,k=224):
     """fonction qui permet de convertir la taille de l'image rentrée en paramètre au format 224 x 224
     Arguments :
     image_jpg : nom de l'image que l'on veut convertir (se termine par .jpg)
     """
     img=cv2.imread(chemin_image)
-    resized_img = cv2.resize(img, (500,500))
+    resized_img = cv2.resize(img, (k,k))
     return resized_img
 
 
