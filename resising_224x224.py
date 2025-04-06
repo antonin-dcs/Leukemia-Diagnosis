@@ -16,11 +16,10 @@ def resizing1(chemin_image):
     Arguments :
     image_jpg : nom de l'image que l'on veut convertir (se termine par .jpg)
     """
-
-
     img=cv2.imread(chemin_image)
-    resized_img = cv2.resize(img, (224, 224))
+    resized_img = cv2.resize(img, (500,500))
     return resized_img
 
 
-#resizing1("exemple_image.jpg")
+if __name__=="main":    
+    resizing1("C:\\Users\\antod\\Desktop\\Projet S6\\ia-detection-leucemie\\exemple_image.jpg")
