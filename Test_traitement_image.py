@@ -9,7 +9,7 @@ from masque import remove_isolated_pixels
 
 if 1==1:
     image_RGB=resizing1("C:\\Users\\antod\\Desktop\\Projet S6\\ia-detection-leucemie\\exemple_image.jpg")
-    image_traitee=Binary_tresholding(K_clustering(RGB_LAB(resizing1("C:\\Users\\antod\\Desktop\\Projet S6\\ia-detection-leucemie\\exemple_image.jpg"))))
+    image_traitee=Binary_tresholding(K_clustering(RGB_LAB(resizing1("C:\\Users\\antod\\Desktop\\Projet S6\\ia-detection-leucemie\\exemple_image.jpg",k=224))))
     removed_pixel=remove_isolated_pixels(image_traitee,k=7)
     cv2.imshow("image de base",image_RGB)
     cv2.imshow('Image traitée', image_traitee)
