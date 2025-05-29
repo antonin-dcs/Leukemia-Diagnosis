@@ -1,11 +1,11 @@
 import numpy as np
 import cv2
-from src.models.preprocessing.resising_224x224 import *
-from src.models.preprocessing.RGB_LAB import *
-from src.models.preprocessing.K_clustering import *
-from src.models.preprocessing.binary_thresholding import *
-from src.models.preprocessing.Retour_RGB import *
-from src.models.preprocessing.masque import remove_isolated_pixels
+from src.preprocessing.resising_224x224 import *
+from src.preprocessing.RGB_LAB import *
+from src.preprocessing.K_clustering import *
+from src.preprocessing.binary_thresholding import *
+from src.preprocessing.Retour_RGB import *
+from src.preprocessing.masque import remove_isolated_pixels
 
 if 1==1:
     image_RGB=resizing1("C:\\Users\\antod\\Desktop\\Projet S6\\ia-detection-leucemie\\exemple_image.jpg")
