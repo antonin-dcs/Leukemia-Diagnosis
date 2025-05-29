@@ -1,16 +1,16 @@
 import torch
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader
+
+
 
 
 ##### attention à bien organiser les images comme ca ##################
 
 # dataset/
-# ├── healthy/
+# ├── healthy/ (HEM)
 # │   ├── image1.jpg
 # │   ├── image2.jpg
 # │   └── ...
-# └── cancerous/
+# └── cancerous/ (All)
 #     ├── image1.jpg
 #     ├── image2.jpg
 #     └── ...
@@ -18,32 +18,9 @@ from torch.utils.data import DataLoader
 #########################################################################
 
 
+from loader import data_loader
 
-# Transformations pour les images
-transform = transforms.Compose([ 
-    transforms.Resize((128, 128)),
-    transforms.ToTensor(),
-    transforms.Normalize((0.5,), (0.5,))
-])
-
-# Charger les datasets
-train_dataset = datasets.ImageFolder('D:/image_cancer/dataset', transform=transform) #transforme toute les images de la manière ci-dessus
-test_dataset = datasets.ImageFolder(r'D:\image_cancer\fold_0', transform=transform) 
-
-# Créer les DataLoader
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True) # charge les images par lots de 32 en mélangeant les données
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False) # à chaque époque de l'entrainement
-
-print("la taille du train_dataset est:", len(train_dataset))
-print("la taille du test_dataset est:", len(test_dataset))
-
-# Charger un lot d'images du train_loader
-images, labels = next(iter(train_loader))
-
-# Afficher la taille de la première image du lot
-print("Taille de l'image :", images[0].shape)
-
-
+train_loader,test_loader=data_loader
 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -73,7 +50,7 @@ print(model)
 import torch.optim as optim
 
 criterion = nn.CrossEntropyLoss()  
-optimizer = optim.Adam(model.parameters(), lr=0.001) # défintion de la fonction de perte et l'optimisateur 
+optimizer = optim.Adam(model.parameters(), lr=0.001) # défintion de la fonction de perte et l'optimiseur 
 
 num_epochs = 10
 
