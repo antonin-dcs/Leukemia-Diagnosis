@@ -1,1 +1,0 @@
-import resising_224x224,binary_thresholding,RGB_LAB,K_clustering
