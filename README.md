@@ -62,7 +62,7 @@ Le dossier [`src/preprocessing`](./src/preprocessing) contient tous les scripts 
 - seuillage, masquage et clustering (`binary_thresholding.py`, `masque.py`, `K_clustering.py`)
 
 
-## ✍️ Auteurs
+## Auteurs
 
 - **Tom Connery**
 - **Emmanuel Djevedjian**
