@@ -15,34 +15,56 @@ L’examen microscopique du sang est une méthode courante de dépistage, mais i
 Pendant ce temps, les techniques d’intelligence artificielle (IA) permettent d’obtenir des résultats remarquables dans l’analyse d’images de microscopie sanguine.
 
 
+## Structure du Projet
 
-# Etapes du traitement de l'image : 
-1. : Conversion RGB-->LAB (Maté doit ajouter le fichier)
-2. : Extraction de a (canal de couleur) fait par maté dans le même fichier 
-3. : formatage des images en tailles 224 x 224 resizing fonctionalité (déja merge dans le main par Antonin)
-4. : K-clustering --> à creuser,
-5. : Binary Thresholding
-6. : Création du masque
-7. : Nettoyage : Comparaison avec l’image originale pour garder uniquement les éléments importants
+```
+.
+├── app/                      # Interface utilisateur
+│   └── Interface_Cellular.py
+├── data/                     # Données d'entrée (ex: images)
+│   └── image_before_process.png
+├── models/                   # Modèles exportés et fichiers de configuration
+│   ├── cancer_cell_classification.pth
+│   └── HEMAI_finale_model.pth
+├── src/
+│   ├── network/              # Définition des architectures de réseaux
+│   │   ├── finale_network.py
+│   │   ├── loader.py
+│   │   └── modelV1.py
+│   └── preprocessing/        # Scripts de prétraitement d'image
+│       ├── binary_thresholding.py
+│       ├── K_clustering.py
+│       ├── masque.py
+│       ├── resizing_224x224.py
+│       ├── Retour_RGB.py
+│       ├── RGB_LAB.py
+│       └── Test_traitement_image.py
+```
+
+## Réseaux de Neurones
+
+Les définitions des réseaux de neurones sont situées dans le dossier [`src/network`](./src/network). Vous y trouverez différentes versions d’architectures telles que :
+
+- `finale_network.py` : architecture finale utilisée pour la prédiction
+- `modelV1.py` : version expérimentale
+- `loader.py` : fonctions pour charger les modèles et données
+
+## Modèles Préentraînés
+
+Les modèles préentraînés au format `.pth` sont disponibles dans le dossier [`models`](./models). Ils peuvent être directement chargés pour réaliser des prédictions sans avoir à entraîner les réseaux depuis zéro.
+
+## Prétraitement
+
+Le dossier [`src/preprocessing`](./src/preprocessing) contient tous les scripts de traitement d’images nécessaires avant l'inférence. Cela inclut :
+
+- redimensionnement d’image (`resizing_224x224.py`)
+- conversion de couleurs (`RGB_LAB.py`, `Retour_RGB.py`)
+- seuillage, masquage et clustering (`binary_thresholding.py`, `masque.py`, `K_clustering.py`)
 
 
-Images Initiales 
-Format : JPG RGB
-Taille des fichiers : Ajustée pour être compatible avec le réseau CNN
-Origine : Images provenant des hôpitaux de Téhéran
+## ✍️ Auteurs
 
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## literrature
-
-http://neuralnetworksanddeeplearning.com/chap1.html 
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
-
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+- **Tom Connery**
+- **Emmanuel Djevedjian**
+- **Maté Cortela**
+- **Antonin Decouvelaere**

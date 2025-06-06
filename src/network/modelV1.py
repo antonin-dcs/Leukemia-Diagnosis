@@ -1,8 +1,4 @@
 import torch
-
-
-
-
 ##### attention à bien organiser les images comme ca ##################
 
 # dataset/
@@ -81,4 +77,4 @@ with torch.no_grad():
 
 print(f"Accuracy: {100 * correct / total}%")
 
-torch.save(model.state_dict(), 'cancer_cell_classifier_petit.pth') # permet de sauvegarder le modèle
+torch.save(model.state_dict(), 'cancer_cell_classifier_V1.pth') # permet de sauvegarder le modèle
