@@ -72,7 +72,7 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,), (0.5,))
 ])
 
-full_dataset = datasets.ImageFolder('/Users/OlivierDJEZVEDJIAN/Documents/Centrale/projetS6/ia-detection-leucemie/reseaux_manu/image_cancer/C-NMC_training_data/fold_0', transform=transform)
+full_dataset = datasets.ImageFolder('data', transform=transform)
 train_size = int(0.7 * len(full_dataset))
 val_size = int(0.15 * len(full_dataset))
 test_size = len(full_dataset) - train_size - val_size
