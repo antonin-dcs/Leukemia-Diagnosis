@@ -49,6 +49,28 @@ Les définitions des réseaux de neurones sont situées dans le dossier [`src/ne
 - `modelV1.py` : version expérimentale
 - `loader.py` : fonctions pour charger les modèles et données
 
+## Tuto pour exécuter le code finale_network.py
+
+Ce code doit comprendre des données d'entrainement étiquetées. Le dataset est disponible via le lien suivant : https://www.cancerimagingarchive.net/collection/c-nmc-2019/.
+Attention dans ce dataset, il ne faut récupérer uniquement les datasets d'entrainement car ce sont les seules images étiquetées. 
+Il faut ensuite organiser sont un fichier de la forme : 
+
+dataset/
+├── healthy/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+└── cancerous/
+    ├── image1.jpg
+    ├── image2.jpg
+    └── ...
+
+Il faut ensuite télécharger les bibliothèques et ajuster votre chemin d'accès à la ligne 75 de la manière suivante : 
+
+`full_dataset = datasets.ImageFolder('votre_chemin_d_acces', transform=transform)`
+
+Après ces changements, l'éxécution du code devrait bien se passer.
+
 ## Modèles Préentraînés
 
 Les modèles préentraînés au format `.pth` sont disponibles dans le dossier [`models`](./models). Ils peuvent être directement chargés pour réaliser des prédictions sans avoir à entraîner les réseaux depuis zéro.
