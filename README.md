@@ -54,7 +54,7 @@ Les définitions des réseaux de neurones sont situées dans le dossier [`src/ne
 Ce code doit comprendre des données d'entrainement étiquetées. Le dataset est disponible via le lien suivant : https://www.cancerimagingarchive.net/collection/c-nmc-2019/.
 
 Attention dans ce dataset, il ne faut récupérer uniquement les datasets d'entrainement car ce sont les seules images étiquetées. 
-Il faut ensuite organiser sont un fichier de la forme : 
+Il faut ensuite organiser son fichier de la manière suivante : 
 ```
 dataset/
 ├── healthy/
